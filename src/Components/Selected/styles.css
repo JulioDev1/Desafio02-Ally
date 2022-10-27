@@ -1,0 +1,16 @@
+.countrySelect {
+  background-color: #e9ecef;
+  border: none;
+  height: 45px;
+  border-radius: 8px;
+}
+.containerSelect {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  border: 1px;
+}
+.containerSelect label {
+  margin-top: 1rem;
+  margin-bottom: 0.7rem;
+}

@@ -2,6 +2,7 @@ import { Input } from "../Input";
 import "./style.css";
 // import { validateEmail } from "../../util";
 import { useState } from "react";
+import { Selected } from "../Selected";
 export function Forms() {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -37,6 +38,8 @@ export function Forms() {
         value={cpf}
         onChange={(e) => setCpf(e.target.value)}
       />
+      <Selected value="country" label="Pais" country="Inglaterra" />
+      <Selected value="city" label="Cidade" country="Oslo" />
       <button>Enviar</button>
     </form>
   );
