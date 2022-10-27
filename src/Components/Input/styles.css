@@ -1,0 +1,17 @@
+input {
+  padding: 0.7rem;
+
+  border-radius: 4px;
+  border: 1px solid;
+  background-color: #e9ecef;
+  border: none;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  row-gap: 5px;
+}
+label {
+  margin-top: 10px;
+}
