@@ -18,7 +18,6 @@ export function Forms() {
   const [cellError, setCellError] = useState(false);
   const [countries, setCountry] = useState([]);
   const [city, setCity] = useState([]);
-
   function validate() {
     if (!validateEmail.test(email)) {
       setErrorEmail(true);
@@ -65,20 +64,20 @@ export function Forms() {
 
           <Input
             type="text"
-            placeholder="digite seu nome"
+            placeholder="Digite seu nome"
             label="Nome"
             value={name}
             setValue={setName}
           />
-          {nameError && <p>digite um nome valido</p>}
+          {nameError && <p>Digite um nome valido</p>}
 
           <Input
-            placeholder="digite seu E-mail"
+            placeholder="Digite seu E-mail"
             label="E-mail"
             value={email}
             setValue={setEmail}
           />
-          {emailError && <p>por favor digite um email valido</p>}
+          {emailError && <p>Por favor digite um email valido</p>}
 
           <MaskedInput
             label="Telefone"
@@ -86,15 +85,15 @@ export function Forms() {
             value={cell}
             onChange={(e) => setCell(e.target.value)}
           />
-          {cellError && <p>campo obrigatorio!</p>}
+          {cellError && <p>Campo obrigatorio!</p>}
 
           <MaskedInput
-            label="Cpf"
+            label="CPF"
             mask="999.999.999-99"
             value={cpf}
             onChange={(e) => setCpf(e.target.value)}
           />
-          {cpfError && <p>campo obrigatorio!</p>}
+          {cpfError && <p>Campo obrigatorio!</p>}
         </form>
         <div className="containerSelected">
           <h1>Destino de Interesse</h1>
