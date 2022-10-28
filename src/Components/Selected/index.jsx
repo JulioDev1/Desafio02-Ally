@@ -1,10 +1,15 @@
 import "./styles.css";
-export function Selected(props) {
+export function Selected({ label, options }) {
   return (
     <div className="containerSelect">
-      <label>{props.label}</label>
+      <label>{label}</label>
       <select className="countrySelect">
-        <option value={props.value}>{props.country}</option>
+        <option>selecione uma opcao</option>
+        {options.map((option) => (
+          <option value={option.name_ptbr} key={option.name_ptbr}>
+            {option.name_ptbr}
+          </option>
+        ))}
       </select>
     </div>
   );

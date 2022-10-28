@@ -6,6 +6,11 @@ import { Selected } from "../Selected";
 import { validateEmail, validateName } from "../../util/regex";
 import username from "../../icons/8666609_user_icon.svg";
 import { MaskedInput } from "../Masked";
+import { useEffect } from "react";
+
+// https://amazon-api.sellead.com/country paises
+// https://amazon-api.sellead.com/city
+
 export function Forms() {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -16,6 +21,8 @@ export function Forms() {
   const [nameError, setNameError] = useState(false);
   const [cpfError, setCpfError] = useState(false);
   const [cellError, setCellError] = useState(false);
+  const [countries, setCountry] = useState([]);
+  const [city, setCity] = useState([]);
 
   function validate() {
     if (!validateEmail.test(email)) {
@@ -45,7 +52,17 @@ export function Forms() {
     return setCpf("");
   }
 
-  console.log(typeof name);
+  useEffect(() => {
+    fetch("https://amazon-api.sellead.com/country")
+      .then((response) => response.json())
+      .then((data) => setCountry(data));
+  }, []);
+  useEffect(() => {
+    fetch("https://amazon-api.sellead.com/city")
+      .then((response) => response.json())
+      .then((data) => setCity(data));
+  }, []);
+  console.log(countries);
   return (
     <div className="containerForm">
       <div className="contentForm">
@@ -59,16 +76,16 @@ export function Forms() {
             setValue={setName}
             src={username}
           />
-
           {nameError && <p>digite um nome valido</p>}
+
           <Input
             placeholder="digite seu E-mail"
             label="E-mail"
             value={email}
             setValue={setEmail}
           />
-
           {emailError && <p>por favor digite um email valido</p>}
+
           <MaskedInput
             label="Telefone"
             mask="99 99999-9999"
@@ -76,6 +93,7 @@ export function Forms() {
             onChange={(e) => setCell(e.target.value)}
           />
           {cellError && <p>campo obrigatorio!</p>}
+
           <MaskedInput
             label="Cpf"
             mask="999.999.999-99"
@@ -86,8 +104,10 @@ export function Forms() {
         </form>
         <div className="containerSelected">
           <h1>Destino de Interesse</h1>
-          <Selected value="country" label="Pais" country="Inglaterra" />
-          <Selected value="city" label="Cidade" country="Oslo" />
+
+          <Selected value="País" label="Pais" options={countries} />
+
+          <Selected value="City" label="Cidade" options={city} />
         </div>
       </div>
 
