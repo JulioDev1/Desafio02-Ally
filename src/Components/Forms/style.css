@@ -8,9 +8,10 @@
 
 h1 {
   margin-bottom: 10px;
+  margin-left: 10px;
 }
 button {
-  width: 90%;
+  width: 60%;
   background-color: #8338ec;
   height: 50px;
   color: white;
@@ -25,4 +26,26 @@ button {
 button:hover {
   opacity: 0.8;
   color: rgb(235, 235, 235);
+}
+.containerForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.containerSelected {
+  display: block;
+  flex-direction: column;
+  width: 365px;
+  margin-bottom: 10.6rem;
+}
+.contentForm {
+  display: flex;
+  align-items: center;
+}
+p {
+  color: red;
+  font-size: 13px;
+  display: block;
+  margin: 0px;
 }

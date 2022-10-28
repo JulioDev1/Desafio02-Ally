@@ -1,4 +1,4 @@
-input {
+.maskedInput {
   padding: 0.7rem;
 
   border-radius: 4px;
@@ -7,12 +7,9 @@ input {
   height: 45px;
   border: none;
 }
-.inputs {
+.inputMaskContainer {
   display: flex;
   flex-direction: column;
   width: 90%;
   row-gap: 5px;
-}
-label {
-  margin-top: 1rem;
 }
