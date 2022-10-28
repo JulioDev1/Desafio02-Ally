@@ -3,6 +3,7 @@
   border: none;
   height: 45px;
   border-radius: 4px;
+  width: 100%;
 }
 .containerSelect {
   display: flex;
@@ -12,4 +13,7 @@
 }
 .containerSelect label {
   margin-bottom: 0.3rem;
+}
+option {
+  color: rgb(0, 0, 0);
 }

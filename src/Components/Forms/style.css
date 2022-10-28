@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 400px;
+  width: 365px;
 }
 
 h1 {
@@ -34,9 +34,11 @@ button:hover {
   flex-direction: column;
 }
 .containerSelected {
-  display: block;
+  display: flex;
+  align-items: center;
   flex-direction: column;
-  width: 365px;
+  width: 100%;
+  max-width: 365px;
   margin-bottom: 10.6rem;
 }
 .contentForm {
@@ -46,6 +48,6 @@ button:hover {
 p {
   color: red;
   font-size: 13px;
-  display: block;
-  margin: 0px;
+  margin-right: 0px;
+  padding: 0;
 }

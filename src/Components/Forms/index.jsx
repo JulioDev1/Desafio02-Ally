@@ -7,10 +7,6 @@ import { validateEmail, validateName } from "../../util/regex";
 import username from "../../icons/8666609_user_icon.svg";
 import { MaskedInput } from "../Masked";
 import { useEffect } from "react";
-
-// https://amazon-api.sellead.com/country paises
-// https://amazon-api.sellead.com/city
-
 export function Forms() {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -62,12 +58,12 @@ export function Forms() {
       .then((response) => response.json())
       .then((data) => setCity(data));
   }, []);
-  console.log(countries);
   return (
     <div className="containerForm">
       <div className="contentForm">
         <form className="forms">
           <h1>Dados Pessoais</h1>
+
           <Input
             type="text"
             placeholder="digite seu nome"
