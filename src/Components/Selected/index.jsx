@@ -4,7 +4,7 @@ export function Selected({ label, options }) {
     <div className="containerSelect">
       <label>{label}</label>
       <select className="countrySelect">
-        <option>selecione uma opcao</option>
+        <option>Selecione uma opcao</option>
         {options.map((option) => (
           <option value={option.name_ptbr} key={option.code}>
             {option.name_ptbr}

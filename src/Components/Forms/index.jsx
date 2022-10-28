@@ -4,7 +4,6 @@ import "./style.css";
 import { useState } from "react";
 import { Selected } from "../Selected";
 import { validateEmail, validateName } from "../../util/regex";
-import username from "../../icons/8666609_user_icon.svg";
 import { MaskedInput } from "../Masked";
 import { useEffect } from "react";
 export function Forms() {
@@ -70,7 +69,6 @@ export function Forms() {
             label="Nome"
             value={name}
             setValue={setName}
-            src={username}
           />
           {nameError && <p>digite um nome valido</p>}
 

@@ -17,3 +17,6 @@
 option {
   color: rgb(0, 0, 0);
 }
+option:hover {
+  background-color: #d6d7d7;
+}
